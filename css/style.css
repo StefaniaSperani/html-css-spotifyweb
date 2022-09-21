@@ -34,10 +34,8 @@ body{
     font-weight: bold;
 }
 
-.txt-medium{
-    font-size: 1.3rem;
-    margin-left: 0.6em;
-    margin-top: 0.6em;
+.txt-small{
+    font-size: 0.8rem;
 }
 
 .txt-big{
@@ -47,6 +45,10 @@ body{
 
 .line-height{
     line-height: 3em;
+}
+
+.margin-left{
+    margin: 1em 0 0 1em;
 }
 
 .recent-played, .create, .artists{
@@ -128,6 +130,7 @@ aside{
 
 .cards img{
     width: 100%;
+    padding-bottom: 0.8em;
 }
 
 .card{
@@ -186,10 +189,14 @@ nav{
 }
 
 @media screen and (max-width: 900px){
-    
+    .card{
+        width: calc((100% / 2) - 2em);
+    }
 }
 
 @media screen and (max-width: 700px){
-    
+    .card{
+        width: calc((100% / 1) - 2em);
+    }
 }
 
