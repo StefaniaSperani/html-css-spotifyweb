@@ -100,7 +100,7 @@ aside{
     background-color: rgba(0, 0, 0, 0.281);
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .upgrade{
@@ -111,29 +111,6 @@ aside{
     padding: 1em 3em;
     cursor: pointer;
 }
-
-
-
-/* Nav */
-.logo{
-    width: 70%;
-    padding-bottom: 1em;
-}
-
-nav{
-    color: var(--text-grey);
-}
-nav .menu{
-    display: flex;
-    align-items: center;
-    padding-top: 0.8em;
-}
-
-.nav-top, .playlist{
-    margin: 1.5em;
-}
-
-
 
 
 
@@ -187,6 +164,24 @@ nav{
     background-color: var(--nero-100);
 }
 
+.logo{
+    width: 70%;
+    padding-bottom: 1em;
+}
+
+nav{
+    color: var(--text-grey);
+}
+nav .menu{
+    display: flex;
+    align-items: center;
+    padding-top: 0.8em;
+}
+
+.nav-top, .playlist, .nav-bot{
+    margin: 1.5em;
+}
+
 .fa-plus{
     background-color: var(--text-grey);
     color: var(--nero-100);
@@ -204,10 +199,22 @@ nav{
     padding: 0.5em 0;
 }
 
+.nav-bot{
+    width: 200px;
+    height: 80px;
+}
 
+.bottom hr{
+    width: 90%;
+    text-align: center;
+}
 
-
-
+.bottom{
+    background-color: var(--nero-100);
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+}
 
 /* PLAY-BAR */
 .playbar{
