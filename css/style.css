@@ -30,6 +30,9 @@ body{
     background-color: var(--nero-100);
 }
 
+.text-uppercase{
+    text-transform: uppercase;
+}
 .bold{
     font-weight: bold;
 }
@@ -67,7 +70,10 @@ body{
     display: none;
 }
 
-
+.circle{
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 
 /* Main section */
@@ -100,19 +106,24 @@ aside{
     background-color: rgba(0, 0, 0, 0.281);
     position: fixed;
     top: 0;
-    z-index: 2000;
+    z-index: 1000;
 }
 
 .upgrade{
     border: 1px solid var(--text-white);
+    color: var(--text-white);
     border-radius: 30px;
     margin-right: 2em;
+    text-decoration: none;
     text-align: center;
     padding: 1em 3em;
     cursor: pointer;
 }
 
-
+.upgrade:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
 /* Contenitore principale */
 .link{
@@ -127,12 +138,25 @@ aside{
     flex-flow: wrap;
     list-style: none;
 }
-
+.active{
+    width: 50%;
+}
 .link a{
     text-decoration: none;
     color: var(--text-grey);
     padding-right: 1.3em;
 }
+
+.link li .active{
+    border-bottom: 3px solid var(--lime-green);
+}
+.link li:hover{
+    border-bottom: 3px solid var(--lime-green);
+    
+}
+
+
+
 
 /* Recently played */
 
@@ -143,13 +167,36 @@ aside{
 
 .cards img{
     width: 100%;
-    padding-bottom: 0.8em;
+    display: block;
+}
+
+.cards-image{
+    position: relative;
+}
+
+.card:hover .cards-overlay{
+    display: flex;
+}
+
+.cards-overlay{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--black-opacity);
+    font-size: 3rem;
+    color: var(--lime-green);
+    display: none;
 }
 
 .card{
     text-align: center;
     width: calc((100% / 6) - 2em);
     margin: 1em;
+    cursor: pointer;
 }
 
 .card .txt-medium{
@@ -199,22 +246,22 @@ nav .menu{
     padding: 0.5em 0;
 }
 
-.nav-bot{
+/* .nav-bot{
     width: 200px;
     height: 80px;
-}
+} */
 
 .bottom hr{
     width: 90%;
     text-align: center;
 }
 
-.bottom{
+/* .bottom{
     background-color: var(--nero-100);
     position: fixed;
     top: 0;
     z-index: 2000;
-}
+} */
 
 /* PLAY-BAR */
 .playbar{
@@ -258,6 +305,12 @@ nav .menu{
 .playbar-center i{
     padding: 0.3em 1em 0 0;
     font-size: 1.5em;
+}
+
+.media-player{
+    /* width: 500px;
+    height: 10px; */
+
 }
 
 .play{
