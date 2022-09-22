@@ -166,13 +166,18 @@ aside{
     margin: 5px auto;
 }
 
-/* .link a:hover{
+.link ul li a:hover:after{
+    content: "";
+    display: block;
     background-color: var(--lime-green);
     width: 50%;
     height: 2px;
     margin: 5px auto;
-} */
+}
 
+.link a:hover{
+    color: var(--text-white);
+}
 
 
 
@@ -226,9 +231,9 @@ aside{
 /* NAV LATERALE */
 nav{
     width: 230px;
-    height: calc(100% - 95px);
     background-color: var(--nero-100);
     color: var(--text-grey);
+    position: relative;
 }
 
 .logo{
@@ -243,7 +248,7 @@ nav .menu{
 }
 
 .nav-top, .playlist, .nav-bot{
-    margin: 1.5em;
+    padding: 1.5em;
 }
 
 .fa-plus{
@@ -259,7 +264,7 @@ nav .menu{
 }
 
 .nome-playlist{
-    height: 30vh;
+    height: 300px;
     overflow-y: auto;
 }
 
@@ -269,7 +274,10 @@ nav .menu{
 }
 
 .nav-bot{
-    height: 80px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--nero-100);
 }
 
 .nav-bot hr{
@@ -285,6 +293,7 @@ nav .menu{
 .install i{
     padding-right: 1em;
 }
+
 .profile{
     padding-top: 1em;
     display: flex;
@@ -339,11 +348,16 @@ nav .menu{
     padding-right: 1em;
 }
 
+.playbar .fa-hearts:hover{
+    cursor: pointer;
+    color: var(--lime-green);
+}
 .media-icons{
     display: flex;
     flex-flow: row;
     justify-content: center;
 }
+
 .playbar-center i{
     padding: 0.3em 1em 0 0;
     font-size: 1.5em;
