@@ -87,10 +87,11 @@ main{
     display: flex; 
 }
 
+
 .main-content{
     width: calc(100% - 230px);
     height: 100%;
-    background-color: var(--deep-blue);
+    background-image: linear-gradient(rgb(10, 121, 10),rgba(255,0,0,0));
 }
 
 .inner-content{
@@ -128,6 +129,7 @@ aside{
     cursor: pointer;
     color: var(--lime-green);
     transform: scale(1.1);
+    transition: 1s;
 }
 
 
@@ -153,7 +155,7 @@ aside{
 
 .link a{
     text-decoration: none;
-    color: var(--text-grey);
+    color: grey;
     padding-right: 1.3em;
 }
 
@@ -232,15 +234,15 @@ aside{
 nav{
     display: flex;
     flex-flow: column;
+    justify-content: space-between;
     overflow: hidden;
     width: 230px;   
     background-color: var(--nero-100);
     color: var(--text-grey);
 }
 
-.logo{
-    width: 70%;
-    padding-bottom: 1em;
+.nav-top, .playlist, .nav-bot{
+    padding: 1.5em;
 }
 
 nav .menu{
@@ -249,8 +251,23 @@ nav .menu{
     padding-top: 0.8em;
 }
 
-.nav-top, .playlist, .nav-bot{
-    padding: 1.5em;
+.logo{
+    width: 70%;
+    padding-bottom: 1em;
+}
+
+.menu img{
+    width: 20px;
+    filter: contrast(0);
+}
+
+.menu:hover{
+    color: var(--text-white);
+    cursor: pointer;
+}
+
+.menu:hover img{
+    filter: contrast(1);
 }
 
 .fa-plus{
@@ -265,19 +282,29 @@ nav .menu{
     padding: 1em 0;
 }
 
+.create-playlist:hover{
+    cursor: pointer;
+    color: var(--text-white);
+}
+
 .playlist{
+    display: flex;
+    flex-flow: column;
     overflow-y: hidden;
 }
 
 .nome-playlist{
-    display: flex;
-    flex-flow: column;
     overflow-y: auto;
 }
 
 .nome-playlist li{
     list-style: none;
     padding: 0.5em 0;
+}
+
+.nome-playlist li:hover{
+    cursor: pointer;
+    color: var(--text-white);
 }
 
 .nav-bot{
@@ -300,12 +327,18 @@ nav .menu{
     padding-right: 1em;
 }
 
+.install:hover{
+    cursor: pointer;
+    color: var(--text-white);
+}
 .profile{
     padding-top: 1em;
     display: flex;
     align-items: center;
 }
-
+.profile:hover{
+    cursor: pointer;
+}
 .profile svg{
     width: 25px;
     height: 25px;
@@ -314,9 +347,6 @@ nav .menu{
     border-radius: 50%;
     object-fit: cover;
 }
-
-
-
 
 
 
@@ -347,6 +377,14 @@ nav .menu{
     padding-left: 0.7em;
 }
 
+.playbar-left:hover{
+    cursor: pointer;
+}
+
+.playbar-left .text:hover{
+    text-decoration: underline;
+}
+
 .playbar .icons{
     padding: 0 3em ;
 }
@@ -355,14 +393,30 @@ nav .menu{
     padding-right: 1em;
 }
 
-.playbar .fa-hearts:hover{
+.playbar .fa-heart:hover{
     cursor: pointer;
     color: var(--lime-green);
 }
+
+.playbar .fa-folder:hover{
+    cursor: pointer;
+    color: var(--lime-green);
+}
+
 .media-icons{
     display: flex;
     flex-flow: row;
     justify-content: center;
+}
+
+.media-icons i:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.media-icons .fa-circle-play:hover{
+    transform: scale(1.4);
+    color: var(--lime-green);
 }
 
 .playbar-center i{
@@ -399,6 +453,11 @@ nav .menu{
 
 .play-right i{
     padding-left: 1em;
+}
+
+.play-right i:hover{
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 .volume-bar {
@@ -456,6 +515,7 @@ nav .menu{
     .none{
         display: block;
         padding: 0.5em 0;
+        width: 1.5em;
     }
 
     .playlist, .logo{
@@ -470,8 +530,8 @@ nav .menu{
         width: 25%;
     }
 
-    .fa-house, .fa-magnifying-glass, .fa-bars{
-        font-size:2.5em;
+    .fa-house, .fa-magnifying-glass {
+        font-size:1.5em;
     }
 }
 
