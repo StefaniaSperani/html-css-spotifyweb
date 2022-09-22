@@ -75,6 +75,10 @@ body{
     overflow: hidden;
 }
 
+.pad-top{
+    padding-top: 1em;
+}
+
 
 /* Main section */
 main{
@@ -122,8 +126,12 @@ aside{
 
 .upgrade:hover{
     cursor: pointer;
+    color: var(--lime-green);
     transform: scale(1.1);
 }
+
+
+
 
 /* Contenitore principale */
 .link{
@@ -133,27 +141,38 @@ aside{
     margin-top: 110px;
 }
 
+.link li{
+    display: flex;
+
+}
 .link ul{
     display: flex;
     flex-flow: wrap;
     list-style: none;
 }
-.active{
-    width: 50%;
-}
+
 .link a{
     text-decoration: none;
     color: var(--text-grey);
     padding-right: 1.3em;
 }
 
-.link li .active{
-    border-bottom: 3px solid var(--lime-green);
+.link a.active:after {
+    content: '';
+    display: block;
+    background-color: var(--lime-green);
+    width: 50%;
+    height: 2px;
+    margin: 5px auto;
 }
-.link li:hover{
-    border-bottom: 3px solid var(--lime-green);
-    
-}
+
+/* .link a:hover{
+    background-color: var(--lime-green);
+    width: 50%;
+    height: 2px;
+    margin: 5px auto;
+} */
+
 
 
 
@@ -207,8 +226,9 @@ aside{
 /* NAV LATERALE */
 nav{
     width: 230px;
-    height: 100%;
+    height: calc(100% - 95px);
     background-color: var(--nero-100);
+    color: var(--text-grey);
 }
 
 .logo{
@@ -216,9 +236,6 @@ nav{
     padding-bottom: 1em;
 }
 
-nav{
-    color: var(--text-grey);
-}
 nav .menu{
     display: flex;
     align-items: center;
@@ -241,27 +258,52 @@ nav .menu{
     padding: 1em 0;
 }
 
+.nome-playlist{
+    height: 30vh;
+    overflow-y: auto;
+}
+
 .nome-playlist li{
     list-style: none;
     padding: 0.5em 0;
 }
 
-/* .nav-bot{
-    width: 200px;
+.nav-bot{
     height: 80px;
-} */
+}
 
-.bottom hr{
+.nav-bot hr{
     width: 90%;
     text-align: center;
 }
 
-/* .bottom{
-    background-color: var(--nero-100);
-    position: fixed;
-    top: 0;
-    z-index: 2000;
-} */
+.install{
+    display: flex;
+    padding-bottom: 1em;
+}
+
+.install i{
+    padding-right: 1em;
+}
+.profile{
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+}
+.profile svg{
+    width: 25px;
+    height: 25px;
+    margin-right: 1em;
+    background-color: var(--text-grey);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+
+
+
 
 /* PLAY-BAR */
 .playbar{
@@ -308,14 +350,25 @@ nav .menu{
 }
 
 .media-player{
-    /* width: 500px;
-    height: 10px; */
-
+    display: flex;
+    align-items: center;
 }
 
-.play{
-    display: flex;
-    padding-top: 1em;
+.progress-bar{
+    height: 4px;
+    background-color: var(--text-grey);
+    width: 350px;
+    border-radius: 10px;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.progress-bar.overlay {
+    height: 4px;
+    background-color: var(--text-white);
+    border-radius: 10px;
+    width: 20%;
+    margin:0;
 }
 
 .playbar-right{
@@ -326,6 +379,23 @@ nav .menu{
 .play-right i{
     padding-left: 1em;
 }
+
+.volume-bar {
+    height: 4px;
+    background-color: var(--text-grey);
+    width: 80px;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.volume-bar.overlay {
+    height: 4px;
+    background-color: var(--text-white);
+    border-radius: 10px;
+    width: 20%;
+}
+
 
 
 
@@ -348,7 +418,6 @@ nav .menu{
 
     .link ul{
         justify-content: center;
-        line-height: 2em;
     }
 }
 
