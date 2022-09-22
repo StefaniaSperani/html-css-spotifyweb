@@ -270,6 +270,8 @@ nav .menu{
 }
 
 .nome-playlist{
+    display: flex;
+    flex-flow: column;
     overflow-y: auto;
 }
 
