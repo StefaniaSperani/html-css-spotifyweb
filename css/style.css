@@ -515,6 +515,7 @@ nav .menu{
 }
 
 .add-playlist{
+    min-width: 300px;
     display: flex;
     margin: 4em;
 }
@@ -529,13 +530,13 @@ nav .menu{
     padding-left: 2em;
 }
 
-.mg-top{
-    margin-top: 7.9em;
+.creator{
+    padding-top: 1em;
 }
-
-.mg-top:hover{
-    cursor: pointer;
+.creator:hover{
     text-decoration: underline;
+    cursor: pointer;
+    color: var(--lime-green);
 }
 
 .add-playlist img:hover{
@@ -583,6 +584,11 @@ nav .menu{
 .fa-user-plus:hover{
     color: var(--lime-green);
 }
+
+
+
+
+
 /* ###############################
             RESPONSIVE 
     ############################# */
@@ -600,6 +606,9 @@ nav .menu{
     .link ul{
         justify-content: center;
     }
+    .txt-bigger{
+        font-size: 4rem;
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -609,6 +618,8 @@ nav .menu{
     aside{
         justify-content: center;
     }
+    
+}
 
 @media screen and (max-width: 600px){
     .card{
@@ -653,5 +664,12 @@ nav .menu{
     .logo-small{
         width: 70%;
         margin-left: -0.8em;
+    }
+    .add-playlist{
+        display: flex;
+        flex-direction: column;
+    }
+    .txt-create{
+        padding-top: 2em;
     }
 }
