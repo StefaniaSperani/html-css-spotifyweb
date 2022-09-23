@@ -336,9 +336,11 @@ nav .menu{
     display: flex;
     align-items: center;
 }
+
 .profile:hover{
     cursor: pointer;
 }
+
 .profile svg{
     width: 25px;
     height: 25px;
@@ -368,11 +370,20 @@ nav .menu{
     max-width: 60px;
 }
 
+.playbar-left .playbar-center .playbar-right{
+    min-width: 100px;
+}
+
 .playbar-left{
     display: flex;
     align-items: center;
 }
 
+.icons{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1.5em;
+}
 .text{
     padding-left: 0.7em;
 }
@@ -383,10 +394,6 @@ nav .menu{
 
 .playbar-left .text:hover{
     text-decoration: underline;
-}
-
-.playbar .icons{
-    padding: 0 3em ;
 }
 
 .fa-heart{
@@ -427,6 +434,10 @@ nav .menu{
 .media-player{
     display: flex;
     align-items: center;
+}
+
+.fa-shuffle{
+    color: var(--lime-green);
 }
 
 .progress-bar{
@@ -505,25 +516,41 @@ nav .menu{
     .card{
         width: calc((100% / 2) - 2em);
     }
-}
+    aside{
+        justify-content: center;
+    }
 
 @media screen and (max-width: 600px){
     .card{
         width: calc((100% / 1) - 2em);
     }
 
+    .link{
+        /* width: ; */
+        line-height: 1.5em;
+    }
+
+    nav{
+       
+    }
+     
     .none{
         display: block;
         padding: 0.5em 0;
         width: 1.5em;
+        cursor: pointer;
     }
 
     .playlist, .logo{
         display: none;
     }
 
-    nav .menu{
+    nav .menu, .install, .profile{
         display: none;
+    }
+
+    .nav-bot hr{
+        width: 20%;
     }
 
     .logo-small{
@@ -533,5 +560,7 @@ nav .menu{
     .fa-house, .fa-magnifying-glass {
         font-size:1.5em;
     }
+
+
 }
 
