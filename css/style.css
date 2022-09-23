@@ -618,6 +618,13 @@ nav .menu{
     aside{
         justify-content: center;
     }
+    .add-playlist{
+        display: flex;
+        flex-direction: column;
+    }
+    .txt-create{
+        padding-top: 2em;
+    }
     
 }
 
@@ -664,12 +671,5 @@ nav .menu{
     .logo-small{
         width: 70%;
         margin-left: -0.8em;
-    }
-    .add-playlist{
-        display: flex;
-        flex-direction: column;
-    }
-    .txt-create{
-        padding-top: 2em;
     }
 }
