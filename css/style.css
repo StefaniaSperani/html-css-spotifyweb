@@ -33,6 +33,7 @@ body{
 .text-uppercase{
     text-transform: uppercase;
 }
+
 .bold{
     font-weight: bold;
 }
@@ -230,6 +231,8 @@ aside{
 }
 
 
+
+
 /* NAV LATERALE */
 nav{
     display: flex;
@@ -259,18 +262,14 @@ nav .menu{
 .out-menu{
     padding: 0;
 }
-.menu img{
+.menu svg{
     width: 20px;
-    filter: contrast(0);
+    color: var(--text-grey);
 }
 
 .menu:hover{
     color: var(--text-white);
     cursor: pointer;
-}
-
-.menu:hover img{
-    filter: contrast(1);
 }
 
 .fa-plus{
@@ -531,53 +530,38 @@ nav .menu{
     .card{
         width: calc((100% / 1) - 2em);
     }
-
     .link{
-        /* width: ; */
         line-height: 1.5em;
     }
-
     .main-content{
         width: calc(100% - 100px);
         height: 100%;
     }
-
     nav{
        width: 100px;
     }
-
     aside{
         width: calc(100% - 100px);
-    }
-    
-     
+    }  
     .none{
         display: block;
         padding: 0.5em 0;
         width: 1.5em;
         cursor: pointer;
     }
-
     .playlist, .logo{
         display: none;
     }
-
     nav .menu, .install, .profile{
         display: none;
     }
-
     .nav-bot hr{
         width: 20%;
     }
-
     .logo-small{
         width: 70%;
     }
-
     .fa-house, .fa-magnifying-glass {
         font-size:1.5em;
     }
-
-
 }
-
