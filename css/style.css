@@ -18,6 +18,9 @@
 body{
     font-family: 'Montserrat', sans-serif;
     color: var(--text-white);
+    scrollbar-width: thin;          
+    scrollbar-color: rgb(0, 255, 21) rgb(0, 0, 0);
+      
 }
 
 .debug{
