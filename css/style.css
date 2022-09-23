@@ -256,6 +256,9 @@ nav .menu{
     padding-bottom: 1em;
 }
 
+.out-menu{
+    padding: 0;
+}
 .menu img{
     width: 20px;
     filter: contrast(0);
@@ -308,7 +311,6 @@ nav .menu{
 }
 
 .nav-bot{
-    bottom: 0;
     width: 100%;
     background-color: var(--nero-100);
 }
@@ -331,6 +333,7 @@ nav .menu{
     cursor: pointer;
     color: var(--text-white);
 }
+
 .profile{
     padding-top: 1em;
     display: flex;
@@ -370,8 +373,8 @@ nav .menu{
     max-width: 60px;
 }
 
-.playbar-left .playbar-center .playbar-right{
-    min-width: 100px;
+.playbar-left, .playbar-center, .playbar-right{
+    min-width: 180px;
 }
 
 .playbar-left{
@@ -382,7 +385,7 @@ nav .menu{
 .icons{
     display: flex;
     flex-direction: column;
-    padding: 1em 1.5em;
+    padding: 1em;
 }
 .text{
     padding-left: 0.7em;
@@ -466,6 +469,10 @@ nav .menu{
     padding-left: 1em;
 }
 
+.play-right{
+    display: flex;
+}
+
 .play-right i:hover{
     cursor: pointer;
     transform: scale(1.2);
@@ -530,9 +537,19 @@ nav .menu{
         line-height: 1.5em;
     }
 
-    nav{
-       
+    .main-content{
+        width: calc(100% - 100px);
+        height: 100%;
     }
+
+    nav{
+       width: 100px;
+    }
+
+    aside{
+        width: calc(100% - 100px);
+    }
+    
      
     .none{
         display: block;
@@ -554,7 +571,7 @@ nav .menu{
     }
 
     .logo-small{
-        width: 25%;
+        width: 70%;
     }
 
     .fa-house, .fa-magnifying-glass {
