@@ -510,8 +510,33 @@ nav .menu{
 
 /* ######## PAGINA CREA PLAYLIST ######### */
 
+.bg-blue{
+    background-image: linear-gradient(rgb(20, 21, 48),rgba(20, 13, 58, 0));
+}
 
+.add-playlist{
+    display: flex;
+    margin: 4em;
+}
 
+.txt-bigger{
+    font-size: 7rem;
+}
+
+.txt-create{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+}
+
+.mg-top{
+    margin-top: 7.9em;
+}
+
+.mg-top:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 /* ###############################
             RESPONSIVE 
